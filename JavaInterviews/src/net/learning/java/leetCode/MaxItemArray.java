@@ -1,10 +1,19 @@
 package net.learning.java.leetCode;
 
-public class MaxItemArray {
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class MaxItemArray implements Cloneable{
+	
+	private String myName= "MaxItemArray";
+	
     public static void main(String[] args) {
-        int [] arr = {1, 3, 23, 9, 18};
+        int [] arr = {1, 3, 23, 9, 18, 23};
         System.out.println(max(arr));
-        System.out.println(max(arr, 3, 4));
+        System.out.println(max(arr, 0, 4));
+        removeDuplicateItem(arr);      
     }
 
     private static int max(int[] arr) {
@@ -34,6 +43,23 @@ public class MaxItemArray {
             }
         }
         return maxval;
+    }
+    
+    private static void removeDuplicateItem(int[] arr) {
+    	Set<Integer> set =  new HashSet<Integer>();
+    	for(int i=0; i<arr.length; i++) {
+    		set.add(arr[i]);
+    	}
+    	
+    	int[] newArray = new int[set.size()];
+    	Iterator<Integer> setItr = set.iterator();
+    	int i=0;
+    	while(setItr.hasNext()) {
+    		newArray[i] = (setItr.next());
+    		i++;
+    	}
+    	
+    	System.out.println("new Array "+Arrays.toString(newArray));
     }
     
 }

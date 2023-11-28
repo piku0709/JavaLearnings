@@ -13,7 +13,7 @@ public class FibonacciSeries {
 		
 		//print series in recursive way
 		for(int i=0; i<10; i++)
-			System.out.print(fibSeriesObj.fib(i) + " ");
+			System.out.print(fibSeriesObj.fibRecursive(i) + " ");
 	}
 	
 	public void printFibSeries(int n) {
@@ -28,11 +28,11 @@ public class FibonacciSeries {
 		System.out.println("fibonaccii series: "+Arrays.toString(fib));
 	}
 	
-	public int fib(int i) {
+	public int fibRecursive(int i) {
 		if(i <=1)
 			return i;
 		
-		int res = fib(i-1) + fib(i-2);
+		int res = fibRecursive(i-1) + fibRecursive(i-2);
 		return res;
 	}
 

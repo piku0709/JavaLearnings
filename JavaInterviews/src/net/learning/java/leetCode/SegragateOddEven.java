@@ -1,4 +1,4 @@
-package net.learning.java;
+package net.learning.java.leetCode;
 
 import java.util.Arrays;
 

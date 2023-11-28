@@ -15,7 +15,7 @@ public class CountDuplicateCharactersofString {
         Map<Character, Integer> map = new HashMap<Character, Integer>();
  
         // Converting given string into a char array
-        char[] charArray = str.toCharArray();
+        char[] charArray = str.replace(" ", "").toCharArray();
  
         // Checking each character of charArray
         for (char c : charArray) { 

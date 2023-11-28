@@ -1,9 +1,11 @@
 package net.learning.java;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
-public class Employee implements Comparable<Employee>{
-    private int id;
+public class Employee implements Comparable<Employee>, Serializable{
+	private static final long serialVersionUID = 1L;
+	private int id;
     private String name;
     private int age;
     private long salary;
